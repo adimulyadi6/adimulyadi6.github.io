@@ -8,96 +8,55 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
 }
-nav {
-  background-color:whitesmoke;https://Uday.adim6.repl.co
+.container-navbar{
   display: flex;
-  justify-content: space-between;
-  /* padding: 10px 0; */
-  height: 40px;
+  justify-content: center;
   align-items: center;
+  height: 100px;
+  background-color: black;
+    
+}
+nav {
+  display: flex;
+  height: 50px;
+  width: 500px;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 100px;
+  border-radius: 30px;
+  background-color: rgba(191, 192, 192, 0.473);
+  box-shadow: 0 1px 7px rgba(0, 0,0, .3);
 }
 .logo {
   color: rgb(0, 0, 0);
-  font-size: large;
+  font-size: 25px;
   pointer-events: none;
+  padding-left: 14px;
   font-family: monospace, serif;
-  padding-left: 20px;
 }
 
 .ul-navbar {
-  padding-inline-start: 90rem;
   list-style: none;
   display: flex;
-  width: 40%;
-  font-size: 7px;
-  /* font-weight: 600; */
+  gap: 25px;
+  font-weight: 500;
 }
 
-.li-navbar {
-  list-style: none;
-  padding: 4px 15px;
-  /* font-size: 7px; */
-}
-.li-navbar:hover {
-  background-color: rgba(195, 195, 195, 0.439);
-  transition: 0.5 ease-in-out;
-  transition-delay: 0s;
-  border-radius: 30px;
-  padding: 4px 15px;
+
+.a-navbar:hover {
+  background-color: rgba(0, 0, 0, 0.439);
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
 }
 
 .a-navbar {
   color: rgb(0, 0, 0);
   text-decoration: none;
   font-size: medium;
+  padding: 14px;
 }
 /* navbar */
-.menu-toggle {
-  right: 18px;
-  display: none;
-  flex-direction: column;
-  height: 20px;
-  justify-content: space-between;
-  position: relative;
-  border: none;
-}
-.menu-toggle input {
-  position: absolute;
-  opacity: 0;
-  width: 40px;
-  height: 28px;
-  right: -6px;
-  top: -5px;
-  cursor: pointer;
-  z-index: 2;
-}
-.menu-toggle span {
-  display: block;
-  width: 28px;
-  height: 3px;
-  background-color: #ffffff;
-  border-radius: 3px;
-  transition: all 0.5s;
-}
-/* animation burger */
-.menu-toggle span:nth-child(2) {
-  transform-origin: 0 0;
-}
 
-.menu-toggle span:nth-child(4) {
-  transform-origin: 0 100%;
-}
-
-.menu-toggle input:checked ~ span:nth-child(2) {
-  transform: rotate(45deg) translate(-1px, -1px);
-}
-.menu-toggle input:checked ~ span:nth-child(3) {
-  scale: 0;
-}
-.menu-toggle input:checked ~ span:nth-child(4) {
-  transform: rotate(-45deg) translate(-1px, 0);
-}
-/* ahir animation burger */
 
 /* menu tablet */
 @media screen and (max-width: 768px) {
@@ -114,34 +73,17 @@ nav {
   }
 }
 /* ahir menu tablet */
-.container{
 
-}
 .container-content {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(212, 212, 212);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 92vh;
   padding-top: vh;
 }
-.y-content {
-  width: 480px;
-  height: 620px;
-  background:white;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  color: black;
-  text-decoration: none;
-  font-size: 20px;
-  flex-direction: column;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
-  border-radius: 30px;
-}
 .img-content {
-  weight: 300px;
+  width: 300px;
   height: 200px;
   justify-content: center;
   align-content: center;
@@ -176,7 +118,7 @@ nav {
   transition-delay: 0, 5s;
 }
 .img-content2 {
-  weight: 300px;
+  width: 300px;
   height: 200px;
   justify-content: center;
   align-content: center;

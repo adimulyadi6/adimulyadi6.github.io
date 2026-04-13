@@ -1,47 +1,120 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="">
-    <title>Hog.</title>
-    <link rel="stylesheet" href="Style/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adi Mulyadi - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
-
-<body>
-    <div class="container">
-        <!-- NAVIGATION BAR -->
-         <div class="container-navbar">
-        <nav>
-            <div class="logo">
-                <h4>hog.</h4>
-            </div>
-
-            <ul class="ul-navbar">
-                <li class="li-navbar">
-                    <a href="#" class="a-navbar">Home</a>
-                </li>   
-                <li class="li-navbar">
-                    <a href="aboutme.html" class="a-navbar">About</a>
-                </li>
-                <li class="li-navbar">
-                    <a href="contactme.html" class="a-navbar">Contact</a>
-                </li>
-            </ul>
-        </nav>
-        </div>
-        <!-- NAVIGATION BAR SELESAI -->
-
-        <!-- CONTENT 1 -->
-        <div class="container-content">
-
-        </div>
-        <!-- CONTENT 1 END -->
-
-        <!-- FOOTER -->
-        <div class="container-footer">
-                <h1 class="footer-h1">hog.labs</h1>
-        </div>
-        <!-- FOOTER END -->
+<body class="bg-gray-900 text-white">
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md z-50 py-6">
+    <div class="max-w-6xl mx-auto px-8 flex justify-between items-center">
+      <div class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+        <i class="fas fa-hexagon mr-2"></i>AM
+      </div>
+      <div class="flex space-x-8">
+        <a href="#about" class="hover:text-cyan-400 transition">01. About</a>
+        <a href="#experience" class="hover:text-cyan-400 transition">02. Experience</a>
+        <a href="#work" class="hover:text-cyan-400 transition">03. Work</a>
+        <a href="#contact" class="hover:text-cyan-400 transition">04. Contact</a>
+        <a href="/resume.pdf" class="bg-cyan-500 px-6 py-2 rounded-full hover:bg-cyan-400 transition font-medium">Resume</a>
+      </div>
     </div>
-<script src="data.js"></script>
+  </nav>
+
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center justify-center pt-24 px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Hi, my name is<br>
+        <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Adi Mulyadi.</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+        I build things for the web.
+      </p>
+      <p class="text-lg text-gray-500 mb-12">
+        I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences.
+      </p>
+      <a href="#work" class="inline-block bg-cyan-500 px-8 py-4 rounded-full text-lg font-medium hover:bg-cyan-400 transition">
+        Check out my work!
+      </a>
+      <div class="flex justify-center space-x-6 mt-16 text-2xl text-gray-500">
+        <a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-github"></i></a>
+        <a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-32 px-8 max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold mb-16 text-center">About Me</h2>
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+          Hello! My name is Adi and I love creating amazing products. 
+          I also love the logic and problem-solving aspects of writing clean, efficient code.
+        </p>
+        <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+          Here are a few technologies I've been working with recently:
+        </p>
+        <ul class="grid grid-cols-2 md:grid-cols-3 gap-4 text-lg">
+          <li class="bg-gray-800 px-4 py-2 rounded-lg">JavaScript (ES6+)</li>
+          <li class="bg-gray-800 px-4 py-2 rounded-lg">TypeScript</li>
+          <li class="bg-gray-800 px-4 py-2 rounded-lg">React</li>
+          <li class="bg-gray-800 px-4 py-2 rounded-lg">Next.js</li>
+          <li class="bg-gray-800 px-4 py-2 rounded-lg">Node.js</li>
+          <li class="bg-gray-800 px-4 py-2 rounded-lg">Tailwind CSS</li>
+        </ul>
+      </div>
+      <div class="text-center">
+        <img src="https://via.placeholder.com/400x500/1a202c/64748b?text=Adi+Mulyadi" alt="Adi Mulyadi" class="w-80 h-96 mx-auto rounded-2xl shadow-2xl">
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="py-32 px-8 bg-gray-950/50">
+    <h2 class="text-4xl font-bold mb-16 text-center">Some Things I've Built</h2>
+    <!-- Tambahkan project cards di sini -->
+    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div class="group bg-gray-800 rounded-2xl p-8 hover:bg-gray-700 transition-all duration-300">
+        <div class="flex items-start space-x-4 mb-4">
+          <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+          <h3 class="text-2xl font-bold">Project 1</h3>
+        </div>
+        <p class="text-gray-300 mb-6">Deskripsi project Anda...</p>
+        <div class="flex space-x-4 text-sm text-cyan-400">
+          <span>React</span>
+          <span>Node.js</span>
+        </div>
+      </div>
+      <!-- Tambah project lain -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="py-20 px-8 text-center border-t border-gray-800">
+    <p class="text-gray-500 mb-4">Thanks for stopping by!</p>
+    <p class="text-gray-400">adi@example.com • Bandung, Indonesia</p>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>

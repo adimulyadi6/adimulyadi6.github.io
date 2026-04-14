@@ -1,0 +1,47 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #0a192f;
+  color: #ccd6f6;
+}
+
+.container {
+  display: flex;
+}
+
+/* Sidebar kiri */
+.sidebar {
+  width: 30%;
+  height: 100vh;
+  position: fixed;
+  padding: 90px;
+  flex: ;
+}
+
+nav a {
+  font-family: 'SF Mono', monospace;
+}
+
+/* Content kanan */
+.content {
+  margin-left: 35%;
+  padding: 90px;
+  width: 70%;
+}
+
+/* Section spacing */
+section {
+  margin-bottom: 100px;
+}
+
+/* Link style */
+a {
+  display: block;
+  margin: 10px 0;
+  color: #64ffda;
+  text-decoration: none;
+}

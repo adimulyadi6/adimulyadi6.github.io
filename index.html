@@ -1,59 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Portfolio Adi</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Adi Mulyadi</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper" ><div class="container">
+        <aside class="sidebar">
+          <div class="profile">
+            <h1>
+              <a style="font-size: 60px; font-weight: 500; color: #ccd6f6"
+                >Adi Mulyadi</a
+              >
+            </h1>
+            <h2>Web Developer</h2>
+            <p>
+              Seorang web developer yang berfokus<br />pada
+              pembuatan situs web yang responsif dan user-friendly.
+            </p>
+          </div>
+          <div class="nav-section">
+            <nav>
+              <a href="#about">About</a>
+              <a href="#experience">Experience</a>
+              <a href="#projects">Projects</a>
+            </nav>
+          </div>
 
-</head>
-<body>
+          <footer>
+            <i class="fa-brands fa-instagram" style;"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </footer>
+        </aside>
+      <!-- Sidebar -->
 
-<div class="container">
+      <!-- Content -->
+      <main class="content">
+        <section id="about">
+          <p>Saya merupakan mahasiswa semester 8 jurusan Teknik Informatika dengan minat utama pada bidang pengembangan web. Ketertarikan ini mendorong saya untuk memahami berbagai konsep dasar hingga lanjutan dalam pengembangan aplikasi berbasis web, baik dari sisi frontend maupun dasar-dasar backend. Saya juga terbiasa mempelajari teknologi terbaru untuk mengikuti perkembangan industri yang dinamis.</p>
 
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <a style="font-size: 60px; font-weight: 500; color: aliceblue;">Adi Mulyadi</a>
-    <h1>Junior Frontend Developer</h1>
+          <p>Selama masa perkuliahan, saya telah memiliki pengalaman dalam membangun beberapa aplikasi berbasis web, mulai dari perancangan tampilan antarmuka hingga implementasi fitur fungsional. Dalam proses tersebut, saya menggunakan teknologi seperti HTML, CSS, dan JavaScript, serta memahami pentingnya membuat aplikasi yang responsif, efisien, dan mudah digunakan oleh pengguna.</p>
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+          <p>Saya memiliki semangat belajar yang tinggi dan komitmen untuk terus mengembangkan keterampilan melalui pengalaman nyata di dunia kerja, khususnya melalui program magang. Dengan pengalaman tersebut, saya berupaya meningkatkan kemampuan teknis, memperkuat kerja sama tim, serta memahami alur kerja profesional dalam pengembangan perangkat lunak secara langsung.
+          </p>
+        </section>
 
-    <footer ;;">
-      <p>&copy; 2024 Adi Mulyadi</p>
-  </aside>
+        <section id="experience">
+          <div class="experience-card">
+            <div class="experience-left">
+              <span>2026 — PRESENT</span>
+            </div>
 
-  <!-- Content -->
-  <main class="content">
-    <section id="about">
-      <h2>About</h2>
-      <p>Saya adalah mahasiswa IT...</p>
-    </section>
+            <div class="experience-right">
+              <h3>
+                Junior Web Developer · PT Inovindo Digital Media
+                <span class="arrow">↗</span>
+              </h3>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <p>Pengalaman kerja / magang...</p>
-    </section>
+              <p>
+                Mengembangkan dan memelihara antarmuka website menggunakan HTML, CSS, dan JavaScript.
+                Berkolaborasi dengan tim dalam pengelolaan tugas menggunakan Trello serta melakukan
+                pengujian dan debugging untuk memastikan performa, responsivitas, dan kualitas website tetap optimal.
+              </p>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>List project kamu...</p>
-    </section>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Trello</span>
+                <span class="tag">VS Code</span>
+              </div>
+            </div>
+          </div>
+          <a class="view-full-cv">Lihat CV Lengkap</a>
+        </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email / sosial media</p>
-    </section>
-  </main>
+        <section id="projects">
+          <div class="projects-section" id="projects"></div>
+        </section>
 
-</div>
-
-</body>
-<script src="js/script.js"></script>
+        <p style="padding-top: 100px; padding-bottom: 150px;">Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with HTML, CSS and JavaScript, deployed with Vercel. All text is set in the Inter typeface.</p>
+      </main>
+    </div></div>
+    
+  </body>
+  <script src="js/script.js"></script>
 </html>

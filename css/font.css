@@ -1,5 +1,0 @@
-@font-face {
-  font-family: 'SF Mono';
-  src: url('path-to-sf-mono.woff2') format('woff2');
-}
-.sfmono { font-family: 'SF Mono', monospace; }

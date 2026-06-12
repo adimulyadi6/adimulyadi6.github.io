@@ -1,26 +1,3 @@
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 150;
-
-    if (window.scrollY >= sectionTop) {
-      current = section.id;
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-
-    if (link.getAttribute("href").includes(current)) {
-      link.classList.add("active");
-    }
-  });
-});
-
 const projects = [
   {
     title: "todoit.",
@@ -46,19 +23,28 @@ const projects = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("projects");
+  renderProjects();
+  initActiveNavigation();
+  initRevealAnimation();
+  initMobileSectionTitleShadow();
+  initSpotlight();
+});
+
+function renderProjects() {
+  const container = document.getElementById("projects-list");
+
+  if (!container) return;
 
   projects.forEach((project) => {
-    const card = document.createElement("div");
-    card.className = "project-item";
+    const card = document.createElement("article");
+    card.className = "project-item reveal";
 
-    // generate tags
     const tagsHTML = project.tags
-      .map(tag => `<span class="tag">${tag}</span>`)
+      .map((tag) => `<span class="tag">${tag}</span>`)
       .join("");
 
     card.innerHTML = `
-      <img src="${project.image}" alt="${project.title}">
+      <img src="${project.image}" alt="Preview project ${project.title}">
       <div class="project-content">
         <h3>${project.title}</h3>
         <p>${project.description}</p>
@@ -70,4 +56,90 @@ document.addEventListener("DOMContentLoaded", () => {
 
     container.appendChild(card);
   });
-});
+}
+
+function initActiveNavigation() {
+  const sections = document.querySelectorAll("main section[id]");
+  const navLinks = document.querySelectorAll("nav a");
+
+  if (!sections.length || !navLinks.length) return;
+
+  const setActiveLink = (id) => {
+    navLinks.forEach((link) => {
+      const isActive = link.getAttribute("href") === `#${id}`;
+      link.classList.toggle("active", isActive);
+    });
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveLink(entry.target.id);
+        }
+      });
+    },
+    {
+      rootMargin: "-30% 0px -55% 0px",
+      threshold: 0,
+    }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+  setActiveLink(sections[0].id);
+}
+
+function initRevealAnimation() {
+  const revealItems = document.querySelectorAll("section, .experience-card, .project-item, .footer-info");
+
+  if (!revealItems.length) return;
+
+  revealItems.forEach((item) => item.classList.add("reveal"));
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      rootMargin: "0px 0px -12% 0px",
+      threshold: 0.08,
+    }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+}
+
+function initMobileSectionTitleShadow() {
+  const titles = document.querySelectorAll(".section-title");
+
+  if (!titles.length) return;
+
+  const updateTitleShadow = () => {
+    titles.forEach((title) => {
+      title.classList.toggle("sticky-active", title.getBoundingClientRect().top <= 0);
+    });
+  };
+
+  updateTitleShadow();
+  window.addEventListener("scroll", updateTitleShadow, { passive: true });
+}
+
+function initSpotlight() {
+  const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  if (!canHover) return;
+
+  window.addEventListener(
+    "pointermove",
+    (event) => {
+      document.documentElement.style.setProperty("--mouse-x", `${event.clientX}px`);
+      document.documentElement.style.setProperty("--mouse-y", `${event.clientY}px`);
+    },
+    { passive: true }
+  );
+}
